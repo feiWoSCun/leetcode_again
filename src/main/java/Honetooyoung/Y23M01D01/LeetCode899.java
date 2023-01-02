@@ -3,6 +3,8 @@ package Honetooyoung.Y23M01D01;
 import java.util.Arrays;
 
 public class LeetCode899 {
+    /*给定一个字符串s和一个整数k。你可以从S的前k个字母中选择一个，并把它加到字符串的末尾。
+        返回在应用上述步骤的任意数量的移动后，字典上最小1的字符串。*/
 }
 
 class Solution {
