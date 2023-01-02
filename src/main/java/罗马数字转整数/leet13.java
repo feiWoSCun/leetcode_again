@@ -1,14 +1,54 @@
 package 罗马数字转整数;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 public class leet13 {
 }
+
 //创建分支
 class Solution {
     public static void main(String[] args) {
-        String str = "LVIII";
+     /*   String str = "LVIII";
         Solution solution = new Solution();
         int i = solution.romanToInt(str);
-        System.out.println(i);
+        System.out.println(i);*/
+        long l = System.currentTimeMillis();
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 100000; i++) {
+            list.add(i);
+        }
+        long l1 = System.currentTimeMillis();
+        System.out.println("arrylist添加10万数据用时=" + String.valueOf(l1 - l));
+
+        long l2 = System.currentTimeMillis();
+        LinkedList<Integer> objects = new LinkedList<>();
+        for (int i = 0; i < 100000; i++) {
+            objects.add(i);
+        }
+        long l3 = System.currentTimeMillis();
+        System.out.println("linkedlist添加10万数据用时=" + String.valueOf(l3 - l2));
+        compare();
+
+    }
+
+    public static void compare() {
+        long l = System.currentTimeMillis();
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 10000000; i++) {
+            list.add(i);
+        }
+        long l1 = System.currentTimeMillis();
+        System.out.println("arrylist添加1000万数据用时=" + String.valueOf(l1 - l));
+
+        long l2 = System.currentTimeMillis();
+        LinkedList<Integer> objects = new LinkedList<>();
+        for (int i = 0; i < 10000000; i++) {
+            objects.add(i);
+        }
+        long l3 = System.currentTimeMillis();
+        System.out.println("linkedlist添加1000万数据用时=" + String.valueOf(l3 - l2));
+
     }
 
     public int romanToInt(String s) {
