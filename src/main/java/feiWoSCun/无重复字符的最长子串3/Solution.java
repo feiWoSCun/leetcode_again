@@ -1,7 +1,6 @@
-package 无重复字符的最长子串3;
+package feiWoSCun.无重复字符的最长子串3;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 /**
  * https://leetcode.cn/problems/longest-substring-without-repeating-characters/

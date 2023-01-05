@@ -1,4 +1,4 @@
-package 最长公共前缀;
+package feiWoSCun.最长公共前缀;
 
 /**
  * leetcode:14

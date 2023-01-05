@@ -18,7 +18,7 @@ import javax.sound.midi.Soundbank;
  */
 
 // @lc code=start
-class Solution {
+class Solution1{
     public static int[] plusOne(int[] digits) {
         int len = digits.length - 1;
         for (int i = len; i >= 0; i--) {
