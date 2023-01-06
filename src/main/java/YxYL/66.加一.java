@@ -1,8 +1,3 @@
-import java.util.Arrays;
-import java.util.List;
-
-import javax.sound.midi.Soundbank;
-
 /*
  * @lc app=leetcode.cn id=66 lang=java
  * [66] 加一
@@ -18,7 +13,7 @@ import javax.sound.midi.Soundbank;
  */
 
 // @lc code=start
-class Solution1{
+class Solution1 {
     public static int[] plusOne(int[] digits) {
         int len = digits.length - 1;
         for (int i = len; i >= 0; i--) {
