@@ -1,4 +1,4 @@
-package feiWoSCun.从不订购的客户183;
+package feiWoSCun.sql.从不订购的客户183;
 
 /**
  * @Description：懂的人自然懂
