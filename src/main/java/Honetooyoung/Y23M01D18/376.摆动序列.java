@@ -10,6 +10,7 @@ package Honetooyoung.Y23M01D18;
 
 给你一个整数数组 nums ，返回 nums 中作为 摆动序列 的 最长子序列的长度 。*/
 //思路是记录上一次差值的正负，如果下次相反则结果+1，如果相同则跳过，得出最后的答案+1即可
+//遇到0跳过
 class Solution {
     public static void main(String[] args) {
         int [] nums={0,0};
