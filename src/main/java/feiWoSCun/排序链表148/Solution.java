@@ -1,6 +1,6 @@
 package feiWoSCun.排序链表148;
 
-import java.text.BreakIterator;
+import java.lang.reflect.Array;
 import java.util.*;
 
 /**
@@ -37,6 +37,12 @@ class ListNode {
 
 class Solution {
     public static void main(String[] args) {
+        String s="1112220910280";
+        String s1 = s.replaceAll("0", "");
+        System.out.println(s1);
+        System.out.println(s1.length());
+        System.out.println();
+
         ListNode listNode1 = new ListNode(1);
         ListNode listNode2 = new ListNode(3);
         ListNode listNode3 = new ListNode(3);
@@ -232,6 +238,11 @@ listNode6.next=listNode5;*/
                 temp.next = temp1;
             } else if (temp2 != null) {
                 temp.next = temp2;
+
+
+                var i=new ArrayList<>();
+
+
             }
             return dummyHead.next;
         }
