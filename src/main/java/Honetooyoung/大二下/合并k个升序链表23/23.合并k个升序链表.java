@@ -1,5 +1,7 @@
 package Honetooyoung.大二下.合并k个升序链表23;
 
+import Honetooyoung.大二下.common.ListNode;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -15,13 +17,7 @@ import java.util.stream.Collectors;
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
+
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists==null){
