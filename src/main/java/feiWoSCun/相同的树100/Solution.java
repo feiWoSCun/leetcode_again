@@ -8,15 +8,20 @@ package feiWoSCun.相同的树100;
  */
 class Solution {
     public boolean isSameTree(TreeNode p, TreeNode q) {
-        if (p == null) {
+   if (p == null) {
             return q == null;
         } else if (q == null) {
             return p == null;
-        } else {
+        }
+        else if(q.val!=p.val){
+            return false
+            ;
+        }
+        else {
         } return  isSameTree(p.left,q.left)&&isSameTree(p.right,q.right);
 
     }
-}
+    }
 
 
 class TreeNode {
