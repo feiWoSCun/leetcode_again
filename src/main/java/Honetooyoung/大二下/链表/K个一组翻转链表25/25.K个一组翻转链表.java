@@ -1,4 +1,4 @@
-package Honetooyoung.大二下.K个一组翻转链表25;
+package Honetooyoung.大二下.链表.K个一组翻转链表25;
 
 import Honetooyoung.大二下.common.ListNode;
 import Honetooyoung.大二下.common.ListNodeUtil;

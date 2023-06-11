@@ -1,4 +1,4 @@
-package Honetooyoung.大二下.旋转链表61;
+package Honetooyoung.大二下.链表.旋转链表61;
 
 import Honetooyoung.大二下.common.ListNode;
 import Honetooyoung.大二下.common.ListNodeUtil;

@@ -1,4 +1,4 @@
-package Honetooyoung.大二下.合并两个有序链表21;
+package Honetooyoung.大二下.链表.合并两个有序链表21;
 
 import Honetooyoung.大二下.common.ListNode;
 import Honetooyoung.大二下.common.ListNodeUtil;

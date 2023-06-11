@@ -1,4 +1,4 @@
-package Honetooyoung.大二下.组合总和II40;
+package Honetooyoung.大二下.回溯.组合总和II40;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

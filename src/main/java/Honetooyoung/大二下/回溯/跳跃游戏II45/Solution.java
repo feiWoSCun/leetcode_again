@@ -1,4 +1,4 @@
-package Honetooyoung.大二下.跳跃游戏II45;
+package Honetooyoung.大二下.回溯.跳跃游戏II45;
 
 public class Solution {
         public static void main(String[] args) {

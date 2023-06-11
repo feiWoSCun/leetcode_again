@@ -1,7 +1,6 @@
-package Honetooyoung.大二下.组合总和II40;
+package Honetooyoung.大二下.回溯.组合总和II40;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 class Solution {
     List<List<Integer>> ans=new ArrayList<>();
