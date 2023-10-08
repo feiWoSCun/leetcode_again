@@ -1,5 +1,7 @@
 package feiWoSCun;
 
+import jdk.jfr.Unsigned;
+
 import java.lang.reflect.Constructor;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -12,34 +14,16 @@ import java.util.stream.Collectors;
  */
 public class Util {
     public static void main(String[] args) throws Exception {
-   /*     List<Integer> asList = Arrays.<Integer>asList(1, 2, 2, 4, 3, null, null,null,5);
-        TreeNode treeNode = new Util().transArrToLinkedList(asList);
-        System.out.println(treeNode);*/
-
-
-        long l = System.currentTimeMillis();
-        for (int i = 0; i < 100000; i++) {
-            TreeNode treeNode = new TreeNode(1);
-        }
-        long l1 = System.currentTimeMillis();
-        System.out.println("new上创建对象花费的时间");
-        System.out.println(l1 - l);
-
-        long l2 = System.currentTimeMillis();
-        Class<TreeNode> forName = (Class<TreeNode>) Class.forName("feiWoSCun.TreeNode");
-        Constructor<TreeNode> declaredConstructor = forName.getDeclaredConstructor(int.class);
-        // Constructor<TreeNode> constructor = (Constructor<TreeNode>) Arrays.stream(forName.getConstructors()).filter
-        // (t -> Arrays.stream(t.getParameterTypes()).allMatch(j -> j.equals(int.class))).findFirst().get();
-        for (int i = 0; i < 100000; i++) {
-            TreeNode o = declaredConstructor.newInstance(0);
-        }
-        long l3 = System.currentTimeMillis();
-        System.out.println("通过反射创建" + "\n" + (l3 - l2));
+        int a = (1 << 31) - 1;
+        System.out.println(a);
+        int b = 1;
+        System.out.println(-a - b);
     }
 
     /**
      * 他妈的每次做二叉树测试样例都要去手动new，我选择撸一个工具类
      * 转换list,数组变成二叉树
+     *
      * @param tar
      * @return
      */
@@ -117,6 +101,7 @@ public class Util {
     /**
      * 层序排列
      * 采用两个队列。轮流记录
+     *
      * @param tar
      * @return
      */
@@ -170,6 +155,19 @@ public class Util {
 
         }
         return head.left;
+    }
+
+    public static int[][] transferToIntNums(String nums) {
+        String[] split = nums.replace("[", "").replace("]", "").replace("]]", "").replace("[[", "").split(",");
+        int sqrt = (int) Math.sqrt(split.length);
+        System.out.println(split.length);
+        int arr[][] = new int[sqrt][sqrt];
+        for (int i = 0; i < sqrt; i++) {
+            for (int j = 0; j < sqrt; j++) {
+                arr[i][j] = Integer.valueOf(split[sqrt * i + j]);
+            }
+        }
+return arr;
     }
 
 
