@@ -1,4 +1,4 @@
-package Honetooyoung.大二下.跳跃游戏55;
+package Honetooyoung.大二下.回溯.跳跃游戏55;
 
 import java.util.Arrays;
 import java.util.List;

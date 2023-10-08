@@ -1,6 +1,4 @@
-package Honetooyoung.大二下.解数独37;
-
-import java.util.Arrays;
+package Honetooyoung.大二下.回溯.解数独37;
 
 class Solution {
     //记录每一排已经存在的数字，为true
