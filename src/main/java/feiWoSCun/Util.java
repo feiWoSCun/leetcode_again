@@ -27,7 +27,7 @@ public class Util {
      * @param tar
      * @return
      */
-    //这个与leetcode上面需要的构建二叉树方式不同，复杂度很高而且还有bug，所以遗弃
+    //这个与leetcode上面需要的构建二叉树方式不同，复杂度很高而且还有bug，所以遗弃 最新的在下面
     @Deprecated
     public static TreeNode transArrToLinkedListWhichIsDeprecated(List<Integer> tar) {
         if (tar == null || tar.size() == 0) {

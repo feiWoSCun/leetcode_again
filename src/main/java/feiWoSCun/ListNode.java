@@ -17,6 +17,11 @@ public class ListNode {
         this.val = val;
     }
 
+    /**
+     * 生成链表的工具类 接受一个lis集合
+     * @param arr
+     * @return
+     */
     public static ListNode generateListNode(List<Integer> arr) {
         ListNode head = new ListNode(0);
         ListNode tempNode = head;
