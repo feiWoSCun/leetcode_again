@@ -4,7 +4,6 @@ import feiWoSCun.TreeNode;
 import feiWoSCun.Util;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * @description:
@@ -15,7 +14,7 @@ import java.util.List;
 public class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
-        TreeNode treeNode = Util.transArrToLinkedList(Arrays.asList(1, 2, 3, 4, 5, null, 6, null, null, 7));
+        TreeNode treeNode = Util.transferToTreenode(Arrays.asList(1, 2, 3, 4, 5, null, 6, null, null, 7));
         int i = solution.TreeDepth(treeNode);
         System.out.println(i);
     }

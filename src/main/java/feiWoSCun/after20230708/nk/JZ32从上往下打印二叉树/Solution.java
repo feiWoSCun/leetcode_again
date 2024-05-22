@@ -1,6 +1,5 @@
 package feiWoSCun.after20230708.nk.JZ32从上往下打印二叉树;
 
-import com.sun.source.tree.Tree;
 import feiWoSCun.TreeNode;
 import feiWoSCun.Util;
 
@@ -16,7 +15,7 @@ import java.util.LinkedList;
  */
 public class Solution {
     public static void main(String[] args) {
-        TreeNode node = Util.transArrToLinkedList(Arrays.asList(8, 6, 10, null, null, 2, 1));
+        TreeNode node = Util.transferToTreenode(Arrays.asList(8, 6, 10, null, null, 2, 1));
         ArrayList<Integer> arrayList = new Solution().PrintFromTopToBottom(node);
         System.out.println(arrayList);
 

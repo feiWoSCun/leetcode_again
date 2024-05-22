@@ -14,7 +14,7 @@ import java.util.LinkedList;
  */
 public class Solution {
     public static void main(String[] args) {
-        TreeNode treeNode = Util.transArrToLinkedList(Arrays.asList(3,9,20,22,23,15,7,9,7,6,4,4,null,null,null,2));
+        TreeNode treeNode = Util.transferToTreenode(Arrays.asList(3,9,20,22,23,15,7,9,7,6,4,4,null,null,null,2));
         boolean balanced = new Solution().isBalanced(treeNode);
         System.out.println(balanced);
     }

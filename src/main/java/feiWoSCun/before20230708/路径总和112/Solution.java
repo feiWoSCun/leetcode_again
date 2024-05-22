@@ -15,7 +15,7 @@ import java.util.Arrays;
  */
 public class Solution {
     public static void main(String[] args) {
-        TreeNode treeNode = Util.transArrToLinkedList(Arrays.asList(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1));
+        TreeNode treeNode = Util.transferToTreenode(Arrays.asList(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1));
         boolean b = new Solution().hasPathSum(treeNode, 22);
         System.out.println(b);
     }

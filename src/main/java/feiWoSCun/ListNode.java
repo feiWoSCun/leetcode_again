@@ -19,6 +19,7 @@ public class ListNode {
 
     /**
      * 生成链表的工具类 接受一个lis集合
+     *
      * @param arr
      * @return
      */
@@ -37,5 +38,30 @@ public class ListNode {
     public static void main(String[] args) {
         ListNode listNode = generateListNode(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 7, 8, 9));
         System.out.println();
+        ListNode listNode1 = cycle_list(Arrays.asList(3, 2, 0, 4), 1);
+        System.out.println();
     }
+
+    public static ListNode cycle_list(List<Integer> arr, int index) {
+        if (arr != null && index > arr.size() - 1) {
+            throw new RuntimeException();
+        }
+        index = index + 1;
+        ListNode listNode = ListNode.generateListNode(Arrays.asList(3, 2, 0, 4));
+        ListNode node = new ListNode(0);
+        node.next = listNode;
+        while (index != 0) {
+            node = node.next;
+            index--;
+        }
+        ListNode temp;
+        temp = listNode;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = node;
+        return listNode;
+    }
+
+
 }

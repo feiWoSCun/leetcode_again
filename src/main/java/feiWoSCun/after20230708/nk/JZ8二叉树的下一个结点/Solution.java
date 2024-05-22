@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class Solution {
     public static void main(String[] args) {
-        TreeNode node = Util.transArrToLinkedList(Arrays.asList(5, 4, null, 3, null, 2));
+        TreeNode node = Util.transferToTreenode(Arrays.asList(5, 4, null, 3, null, 2));
     }
     List<TreeLinkNode> res = new ArrayList<>();
     public TreeLinkNode GetNext(TreeLinkNode pNode) {

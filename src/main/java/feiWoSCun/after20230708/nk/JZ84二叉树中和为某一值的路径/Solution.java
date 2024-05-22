@@ -18,7 +18,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        TreeNode node = Util.transArrToLinkedList(Arrays.asList(1, 2, 3, 4, 5, 4, 3, null, null, -1));
+        TreeNode node = Util.transferToTreenode(Arrays.asList(1, 2, 3, 4, 5, 4, 3, null, null, -1));
         solution.FindPath(node,6);
     }
     public int FindPath(TreeNode root, int sum) {

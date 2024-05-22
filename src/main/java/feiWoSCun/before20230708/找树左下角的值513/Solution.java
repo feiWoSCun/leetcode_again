@@ -15,7 +15,7 @@ public class Solution {
     // mn3. sTimer
     public static void main(String[] args) {
         String _s = "we";
-        TreeNode treeNode = Util.transArrToLinkedList(Arrays.asList(2, 1, 3, 4, 3, 1, 2, 3, 4, null, null, null, null, null, null, null, 6));
+        TreeNode treeNode = Util.transferToTreenode(Arrays.asList(2, 1, 3, 4, 3, 1, 2, 3, 4, null, null, null, null, null, null, null, 6));
         int bottomLeftValue = new Solution().findBottomLeftValue(treeNode);
         System.out.println(bottomLeftValue);
     }

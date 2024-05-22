@@ -14,7 +14,7 @@ import java.util.LinkedList;
  */
 public class Solution {
     public static void main(String[] args) {
-        TreeNode treeNode = Util.transArrToLinkedList
+        TreeNode treeNode = Util.transferToTreenode
                 (Arrays.asList
                         (1, 2, 3, 4, 5, 6));
         int i = new Solution().countNodes2(treeNode);

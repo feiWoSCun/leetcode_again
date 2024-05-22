@@ -15,7 +15,7 @@ import java.util.List;
 public class Solution {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8, null);
-        TreeNode node = Util.transArrToLinkedList(list);
+        TreeNode node = Util.transferToTreenode(list);
         int i = new Solution().maxDepth(node);
         System.out.println(i);
     }

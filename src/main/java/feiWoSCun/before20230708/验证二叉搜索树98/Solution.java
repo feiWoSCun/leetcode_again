@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class Solution {
     public static void main(String[] args) {
-        TreeNode treeNode = Util.transArrToLinkedList(Arrays.asList(5,1,4,null,null,3,6));
+        TreeNode treeNode = Util.transferToTreenode(Arrays.asList(5,1,4,null,null,3,6));
         boolean validBST = new Solution().isValidBST(treeNode);
         System.out.println(validBST);
     }

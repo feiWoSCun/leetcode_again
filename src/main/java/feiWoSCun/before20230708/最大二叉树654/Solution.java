@@ -19,7 +19,7 @@ public class Solution {
     public static void main(String[] args) {
 
 
-        TreeNode treeNode = Util.transArrToLinkedList(Arrays.asList(3, 2, 1, 6, 0, 5));
+        TreeNode treeNode = Util.transferToTreenode(Arrays.asList(3, 2, 1, 6, 0, 5));
         TreeNode treeNode1 = new Solution().constructMaximumBinaryTree(new int[]{3, 2, 1, 6, 0, 5});
         System.out.println(treeNode1);
     }

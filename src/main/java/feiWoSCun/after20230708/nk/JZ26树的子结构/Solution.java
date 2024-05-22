@@ -4,7 +4,6 @@ import feiWoSCun.TreeNode;
 import feiWoSCun.Util;
 
 import java.util.Arrays;
-import java.util.HashMap;
 
 /**
  * @description:
@@ -14,8 +13,8 @@ import java.util.HashMap;
  */
 public class Solution {
     public static void main(String[] args) {
-        TreeNode node = Util.transArrToLinkedList(Arrays.asList(1, 2, 3));
-        TreeNode node1 = Util.transArrToLinkedList(Arrays.asList(2, 3, null));
+        TreeNode node = Util.transferToTreenode(Arrays.asList(1, 2, 3));
+        TreeNode node1 = Util.transferToTreenode(Arrays.asList(2, 3, null));
         boolean b = new Solution().HasSubtree(node, node1);
     }
 

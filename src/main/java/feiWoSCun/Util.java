@@ -1,8 +1,6 @@
 package feiWoSCun;
 
-import jdk.jfr.Unsigned;
-
-import java.lang.reflect.Constructor;
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -106,7 +104,7 @@ public class Util {
      * @return
      */
 
-    public static TreeNode transArrToLinkedList(List<Integer> tar) {
+    public static TreeNode transferToTreenode(List<Integer> tar) {
         if (tar == null) {
             return null;
         }
@@ -167,8 +165,67 @@ public class Util {
                 arr[i][j] = Integer.valueOf(split[sqrt * i + j]);
             }
         }
-return arr;
+        return arr;
+    }
+
+    public static <T, K> T[][] transToTwoDimensional(Class<T> tClass, List<K> lists, int i, int j) {
+        List<T[]> res = new ArrayList<>();
+        for (int m = 0; m < i; m++) {
+            T[] array = (T[]) Util.getArray(tClass, j);
+            for (int n = 0; n < j; n++) {
+                array[n] = Util.transKtoT(lists.get(n), tClass);
+            }
+            res.add(array);
+        }
+        T[][] array = res.toArray((T[][]) Util.getArray(tClass, i, j));
+        return array;
+    }
+
+    private static <T, K> T transKtoT(K k, Class<T> tClass) {
+        if (tClass == Integer.class && k instanceof String) {
+            T t = (T) (Integer.valueOf((String) k));
+            return t;
+        }
+        return (T) k;
     }
 
 
+    public static <T> T[][] transToTwoDimensional(Class<T> tClass, String tar, int i, int j) {
+        String[] split = tar.replace("[", "").replace("]", "").replace("\"", "").split(",");
+        List<String> list = Arrays.asList(split);
+        return Util.transToTwoDimensional(tClass, list, i, j);
+    }
+
+    @SuppressWarnings({"unchecked", "hiding"})
+    private static<T> Object getArray(Class<T> componentType, int... length) {
+
+        return Array.newInstance(componentType, length);
+    }
+
+    /**
+     * 使用java封装一个工具类，要求接受一个字符串形如"[[2],[3,4],[6,5,7],[4,1,8,3]]"，要求返回一个List<List<Integer>>
+     * @param input
+     * @return
+     */
+    public static List<List<Integer>> parseString(String input) {
+        List<List<Integer>> result = new ArrayList<>();
+
+        // 去除首尾的方括号并分割字符串
+        String[] outerArray = input.substring(2, input.length() - 2).split("\\],\\[");
+
+        for (String innerStr : outerArray) {
+            // 分割内部的逗号分隔符
+            String[] innerArray = innerStr.split(",");
+            List<Integer> innerList = new ArrayList<>();
+
+            for (String numStr : innerArray) {
+                // 解析字符串为整数并添加到内部列表
+                innerList.add(Integer.parseInt(numStr));
+            }
+
+            result.add(innerList);
+        }
+
+        return result;
+    }
 }
